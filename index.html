@@ -1,14 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-	<title>OATS</title>
-	
-	<link rel="stylesheet" href="assets/styles/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>OATS</title>
+
+    <link rel="icon" type="image/x-icon" href="/res/oats.webp">
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
+
 <body>
-    <h1>oats</h1>
+    <div id="content">
+        <div id="gnomed"></div>
+        <div class="credits">
+            <p>credits</p>
+            <ul>
+                <li><a href="https://7tv.app/emotes/66b53140d37d160a0e00970d">OATS - J0hnnyBlade</a></li>
+                <li><a href="https://www.youtube.com/watch?v=6n3pFFPSlW4">youve been gnomed.wmv</a></li>
+            </ul>
+        </div>
+    </div>
+    <audio autoplay id="oooo">
+        <source src="res/gnomed.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        function oooo() {
+            var audio = document.getElementById('oooo');
+            audio.play();
+        }
+
+        setInterval(oooo, 10);
+    </script>
 </body>
+
+<style>
+    @font-face {
+        font-family: "Comic Sans";
+        src: url(res/comic-sans.ttf) format("truetype");
+    }
+
+    html,
+    body {
+        background: hsl(0, 0%, 10%);
+        color: white;
+        font-family: "Comic Sans", sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    #gnomed {
+        background-image: url('res/gnomed-gnome.gif');
+        background-size: contain;
+        height: 80vh;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .credits {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 10px;
+    }
+
+    .credits p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .credits ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        width: 50%;
+    }
+
+    .credits ul li a {
+        color: inherit;
+        text-decoration: none;
+    }
+</style>
+
 </html>
